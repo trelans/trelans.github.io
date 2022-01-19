@@ -293,6 +293,7 @@ body {
 	position: absolute;
 	top: 45px;
 	z-index: 3;
+	cursor: pointer;
 }
 /*** THE END NAVIGATION SITE TITLE ***/
 
