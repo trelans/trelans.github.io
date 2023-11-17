@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns: 3fr auto 5fr;
+    height: 100vh;
+    position: relative;
+    background: #000;
+    font-size: 14px;
+}
+
+.props {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-left: 1px solid #000;
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.slide {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 14px;
+}
+
+#shortcut-list {
+    list-style-type: none;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 250px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+#timeline-container {
+    grid-row: 3;
+    grid-column: span 3;
+    position: absolute;
+    bottom: 5px; 
+    left: 0;
+}
+
+#timeline-container {
+    width: 100%;
+    height: 10vh;
+    white-space: nowrap;
+    background-color: #ccc;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    position: relative;
+}
+
+#timeline-container::-webkit-scrollbar {
+    display: none;
+}
+
+.ruler {
+    width: 100%;
+    background-color: #ccc;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
+.timeline-marker {
+    display: inline-block;
+    width: 10%;
+    height: 100%;
+    background-color: #007BFF;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.slider-point {
+    width: 15px;
+    /* Increase point size */
+    height: 15px;
+    /* Increase point size */
+    background-color: #007BFF;
+    /* Customize point color */
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    bottom: 10%;
+}
+
+#play-buttons {
+    padding-left: 10px;
+    border-top: 1px solid #000;
+    background-color: #eee;
+    grid-row: 2;
+    grid-column: span 3;
+}
+
+#play-btn, #pause-btn, #stop-btn, #add-btn, #save-btn, #load-btn {
+    width: 25px;
+    cursor: pointer;
+}
+
+.disabled {
+    pointer-events: none; /* Disable pointer events */
+}
+
+#keyframes {
+    border-right: 1px solid #000;
+    background-color: #ddd;
+    max-height: 90vh;
+}
+
+.keyframe-btns {
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+#keyframe-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.keyframe-item {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.keyframe-item:hover {
+    background-color: #e0e0e0;
+}
+
+/* Added styles for the selected state */
+.keyframe-item.selected {
+    background-color: black;
+    color: white;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1300;
+    height: 710;
+    background: url('background2.png') no-repeat left top fixed ;
+    background-size: contain; /* Use 'contain' instead of 'cover' */
+    z-index: -1; /* Send it to the back */
+}
