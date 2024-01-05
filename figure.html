@@ -1,0 +1,265 @@
+<html>
+
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute  vec4 vPosition;
+attribute  vec4 vColor;
+attribute vec2 vTexCoord; // New attribute for texture coordinates
+
+
+uniform mat4 modelViewMatrix;
+uniform mat4 projectionMatrix;
+uniform mat4 r;
+varying vec4 fragColor;
+varying vec2 texCoord; // Pass texture coordinates to the fragment shader
+
+void main() 
+{
+    //gl_Position =  r * projectionMatrix * modelViewMatrix * vPosition * vec4(0.5, 0.7, 1.0, 1.0);
+    gl_Position =  r * projectionMatrix * modelViewMatrix * vPosition * vec4(0.5, 0.7, 1.0, 1.0);
+    fragColor = vColor;
+    texCoord = vTexCoord;
+} 
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+varying vec4 fragColor; // Receive the color from the vertex shader
+varying vec2 texCoord; // Receive texture coordinates from the vertex shader
+
+uniform sampler2D texture; // Uniform for the texture
+uniform sampler2D texture2; // Uniform for the texture
+void main()
+{
+
+    gl_FragColor = texture2D(texture, texCoord) * texture2D(texture2, texCoord) * fragColor;
+}
+</script>
+
+
+
+<script type="text/javascript" src="Animation/Common/webgl-utils.js"></script>
+<script type="text/javascript" src="Animation/Common/InitShaders.js"></script>
+<script type="text/javascript" src="Animation/Common/MV.js"></script>
+<script type="text/javascript" src="Animation/ui.js"></script>
+<script type="text/javascript" src="Animation/figure.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+    <div id="keyframes">
+        <div id="keyframe-buttons">
+            <div class="keyframe-btns">
+                <img src="Animation/images/save.svg" id="save-btn" />
+                <p>Save Animations</p>
+            </div>
+            <div class="keyframe-btns">
+                <img src="Animation/images/load.svg" id="load-btn" />
+                <p>Load Animations</p>
+            </div>
+            <div class="keyframe-btns">
+                <img src="Animation/images/add.svg" id="add-btn" />
+                <p>Add Animation</p>
+            </div>
+        </div>
+        <hr>
+        <ul id="keyframe-list">
+        </ul>
+        <ul id="shortcut-list">
+            <li><b>Shortcuts:</b></li>
+            <li>Ctrl: Focus previous slider (last-to-first)</li>
+            <li>Enter: Focus next slider (first-to-last)</li>
+            <li>Arrow keys: Change value of the selected slider</li>
+            <li>Mouse click and drag: Moving eye</li>
+            <li>Shift + Arrow keys: moving camera</li>
+            <li>Mouse scroll in timeline area: creates new seconds (i.e more than 10 seconds are available)</li>
+            <li>If you do not see the texture, it should work on localhost but otherwise security issues prevent it from being displayed</li>
+        </ul>
+    </div>
+    <div class="canvas">
+        <div id="background"></div>
+        <canvas id="gl-canvas" width="890" height="640">Oops ... your browser doesn't support the HTML5 canvas
+            element</canvas>
+    </div>
+    <div class="props">
+        <div>
+            <div id="torsoId">
+                torso angle y -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="torsoRotation2">
+                torso angle x -180 <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="torsoRotation3">
+                torso angle z -180 <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerFrontLeftUpperLegId">
+                Corner Front Left Upper Leg -180
+                <input class="slide" type="range" min="-90" max="100" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerFrontLeftMiddleLegId">
+                Corner Front Left Middle Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerFrontLeftLowerLegId">
+                Corner Front Left Lower Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerFrontRightUpperLegId">
+                Corner Front Right Upper Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerFrontRightMiddleLegId">
+                Corner Front Right Middle Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerFrontRightLowerLegId">
+                Corner Front Right Lower Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerBackLeftUpperLegId">
+                Corner Back Left Upper Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerBackLeftMiddleLegId">
+                Corner Back Left Middle Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerBackLeftLowerLegId">
+                Corner Back Left Lower Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerBackRightUpperLegId">
+                Corner Back Right Upper Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerBackRightMiddleLegId">
+                Corner Back Right Middle Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="cornerBackRightLowerLegId">
+                Corner Back Right Lower Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleFrontUpperLegId">
+                Middle Front Upper Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleFrontMiddleLegId">
+                Middle Front Middle Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleFrontLowerLegId">
+                Middle Front Lower Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleBackUpperLegId">
+                Middle Back Upper Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleBackMiddleLegId">
+                Middle Back Middle Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleBackLowerLegId">
+                Middle Back Lower Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleLeftUpperLegId">
+                Middle Left Upper Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleLeftMiddleLegId">
+                Middle Left Middle Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleLeftLowerLegId">
+                Middle Left Lower Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleRightUpperLegId">
+                Middle Right Upper Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleRightMiddleLegId">
+                Middle Right Middle Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+            <div id="middleRightLowerLegId">
+                Middle Right Lower Leg -180
+                <input class="slide" type="range" min="-180" max="180" step="5" value="0" />
+                180
+            </div>
+
+            <div id="translationXSlider">
+                Translation X
+                <input class="slide" type="range" min="-10" max="10" step="1" value="0" />
+                10
+            </div>
+
+            <div id="translationYSlider">
+                Translation Y
+                <input class="slide" type="range" min="-16" max="16" step="2" value="0" />
+                10
+            </div>
+
+            <div id="translationZSlider">
+                Translation Z
+                <input class="slide" type="range" min="-10" max="10" step="1" value="0" />
+                10
+            </div>
+
+            <div id="moveAllLegs">
+                Move all legs
+                <input class="slide" type="range" min="-10" max="80" step="5" value="0" />
+            </div>
+            <div id="moveMiddleLegs">
+                Move middle legs
+                <input class="slide" type="range" min="-150" max="100" step="5" value="0" />
+            </div>
+            <div id="moveLowerLegs">
+                Move lower legs
+                <input class="slide" type="range" min="-150" max="100" step="5" value="0" />
+            </div>
+        </div>
+    </div>
+    <div id="play-buttons">
+        <img src="Animation/images/play.svg" id="play-btn" />
+        <img src="Animation/images/pause.svg" id="pause-btn" />
+        <img src="Animation/images/stop.svg" id="stop-btn" />
+    </div>
+    <div id="timeline-container">
+        <!-- Add markers dynamically via JavaScript -->
+        <div id="ruler"></div>
+    </div>
+    <div id="click-listener" style="display: none;"></div>
+</body>
+
+</html>
