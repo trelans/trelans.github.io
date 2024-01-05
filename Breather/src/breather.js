@@ -281,12 +281,12 @@ function configureCubeMap() {
   gl.bindTexture(gl.TEXTURE_CUBE_MAP, cubeMap);
 
   // Load each face of the cube map with the image
-  loadCubeMapFace("pos-x.jpg", gl.TEXTURE_CUBE_MAP_POSITIVE_X);
-  loadCubeMapFace("neg-x.jpg", gl.TEXTURE_CUBE_MAP_NEGATIVE_X);
-  loadCubeMapFace("pos-y.jpg", gl.TEXTURE_CUBE_MAP_POSITIVE_Y);
-  loadCubeMapFace("neg-y.jpg", gl.TEXTURE_CUBE_MAP_NEGATIVE_Y);
-  loadCubeMapFace("pos-z.jpg", gl.TEXTURE_CUBE_MAP_POSITIVE_Z);
-  loadCubeMapFace("neg-z.jpg", gl.TEXTURE_CUBE_MAP_NEGATIVE_Z);
+  loadCubeMapFace("Breather/src/pos-x.jpg", gl.TEXTURE_CUBE_MAP_POSITIVE_X);
+  loadCubeMapFace("Breather/src/neg-x.jpg", gl.TEXTURE_CUBE_MAP_NEGATIVE_X);
+  loadCubeMapFace("Breather/src/pos-y.jpg", gl.TEXTURE_CUBE_MAP_POSITIVE_Y);
+  loadCubeMapFace("Breather/src/neg-y.jpg", gl.TEXTURE_CUBE_MAP_NEGATIVE_Y);
+  loadCubeMapFace("Breather/src/pos-z.jpg", gl.TEXTURE_CUBE_MAP_POSITIVE_Z);
+  loadCubeMapFace("Breather/src/neg-z.jpg", gl.TEXTURE_CUBE_MAP_NEGATIVE_Z);
 
   gl.texParameteri(gl.TEXTURE_CUBE_MAP, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
   gl.texParameteri(gl.TEXTURE_CUBE_MAP, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
