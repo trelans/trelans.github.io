@@ -1,6 +1,7 @@
 var canvas;
 var gl;
 var program;
+var figureAssetBase = document.currentScript ? new URL(".", document.currentScript.src) : "Animation/";
 
 var projectionMatrix;
 var modelViewMatrix;
@@ -1024,7 +1025,7 @@ window.onload = function init() {
         new Uint8Array([0, 0, 255, 255]));
     // Asynchronously load an image
     var image = new Image();
-    image.src = "image-texture.png";
+    image.src = new URL("image-texture.png", figureAssetBase).href;
     image.addEventListener('load', function () {
         // Now that the image has loaded make copy it to the texture.
         gl.bindTexture(gl.TEXTURE_2D, texture);
@@ -1040,7 +1041,7 @@ window.onload = function init() {
         new Uint8Array([0, 0, 255, 255]));
     // Asynchronously load an image
     var image = new Image();
-    image.src = "image-texture4.png";
+    image.src = new URL("image-texture4.png", figureAssetBase).href;
     image.addEventListener('load', function () {
         // Now that the image has loaded make copy it to the texture.
         gl.bindTexture(gl.TEXTURE_2D, textureBackground);

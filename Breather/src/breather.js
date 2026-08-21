@@ -7,6 +7,7 @@ const GOURAUD = 2;
 var gl;
 var program;
 var canvas;
+var breatherAssetBase = document.currentScript ? new URL(".", document.currentScript.src) : "Breather/src/";
 
 // Global Matrices
 var modelViewMatrix;
@@ -281,12 +282,12 @@ function configureCubeMap() {
   gl.bindTexture(gl.TEXTURE_CUBE_MAP, cubeMap);
 
   // Load each face of the cube map with the image
-  loadCubeMapFace("Breather/src/pos-x.jpg", gl.TEXTURE_CUBE_MAP_POSITIVE_X);
-  loadCubeMapFace("Breather/src/neg-x.jpg", gl.TEXTURE_CUBE_MAP_NEGATIVE_X);
-  loadCubeMapFace("Breather/src/pos-y.jpg", gl.TEXTURE_CUBE_MAP_POSITIVE_Y);
-  loadCubeMapFace("Breather/src/neg-y.jpg", gl.TEXTURE_CUBE_MAP_NEGATIVE_Y);
-  loadCubeMapFace("Breather/src/pos-z.jpg", gl.TEXTURE_CUBE_MAP_POSITIVE_Z);
-  loadCubeMapFace("Breather/src/neg-z.jpg", gl.TEXTURE_CUBE_MAP_NEGATIVE_Z);
+  loadCubeMapFace(new URL("pos-x.jpg", breatherAssetBase).href, gl.TEXTURE_CUBE_MAP_POSITIVE_X);
+  loadCubeMapFace(new URL("neg-x.jpg", breatherAssetBase).href, gl.TEXTURE_CUBE_MAP_NEGATIVE_X);
+  loadCubeMapFace(new URL("pos-y.jpg", breatherAssetBase).href, gl.TEXTURE_CUBE_MAP_POSITIVE_Y);
+  loadCubeMapFace(new URL("neg-y.jpg", breatherAssetBase).href, gl.TEXTURE_CUBE_MAP_NEGATIVE_Y);
+  loadCubeMapFace(new URL("pos-z.jpg", breatherAssetBase).href, gl.TEXTURE_CUBE_MAP_POSITIVE_Z);
+  loadCubeMapFace(new URL("neg-z.jpg", breatherAssetBase).href, gl.TEXTURE_CUBE_MAP_NEGATIVE_Z);
 
   gl.texParameteri(gl.TEXTURE_CUBE_MAP, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
   gl.texParameteri(gl.TEXTURE_CUBE_MAP, gl.TEXTURE_MAG_FILTER, gl.LINEAR);

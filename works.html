@@ -1,335 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Games, applications, and learning projects from an anonymous independent game maker.">
+  <meta name="theme-color" content="#070b12">
+  <meta property="og:title" content="Projects — Game Maker Portfolio">
+  <meta property="og:description" content="Mobile games, playful applications, and technical studies.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://trelans.xyz/img/og-game-maker.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects — Game Maker Portfolio">
+  <meta name="twitter:description" content="Mobile games, playful applications, and technical studies.">
+  <meta name="twitter:image" content="https://trelans.xyz/img/og-game-maker.png">
+  <link rel="icon" href="img/favicon.PNG">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Projects — Game Maker Portfolio</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell shell">
+      <a class="brand" href="index.html" aria-label="Game Maker Portfolio home">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span class="brand-label">Game Maker <small>Independent portfolio</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle><span></span></button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
+        <a href="index.html">Home</a>
+        <a href="works.html" aria-current="page">Projects</a>
+        <a href="index.html#lab">Interactive lab</a>
+        <a href="about.html">About the work</a>
+      </nav>
+    </div>
+  </header>
 
-    <head>
-	
-    <meta charset="utf-8" />	 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="KUTAY SENYIGIT" />
+  <main id="main">
+    <section class="page-hero shell">
+      <p class="eyebrow">Project archive</p>
+      <h1>Designed to be <span>played.</span></h1>
+      <p>A collection of mobile games, application prototypes, and foundational studies. Every case study focuses on the interaction, technical problem, and design decisions behind the build.</p>
+    </section>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />	   
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-	<link href="img/favicon.png" rel="shortcut icon" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
-	
-	<script src="js/modernizr.js"></script>
+    <section class="section shell" aria-labelledby="all-projects-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">All work</p><h2 id="all-projects-title">Thirteen focused builds.</h2></div>
+        <p>Filter the archive by project type, or open any card for a concise case study.</p>
+      </div>
+      <div class="filter-bar" data-project-filters aria-label="Filter projects">
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-button" type="button" data-filter="game" aria-pressed="false">Games</button>
+        <button class="filter-button" type="button" data-filter="app" aria-pressed="false">Applications</button>
+        <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web</button>
+        <button class="filter-button" type="button" data-filter="learning" aria-pressed="false">Learning studies</button>
+      </div>
+      <div class="project-grid">
+        <a class="project-card" href="StackPush.html" data-project-category="game"><div class="project-media"><img src="img/projects/StackPush/gif.gif" alt="Push Stacks gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Runner game</span><span>2021</span></div><h3>Push Stacks</h3><p>Grow a stronger crowd by choosing the right multiplier gates.</p></div></a>
+        <a class="project-card" href="Cocktail.html" data-project-category="game"><div class="project-media"><img src="img/projects/Cocktail/cocktail.png" alt="DIY Cocktail artwork" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Creative game</span><span>2021</span></div><h3>DIY Cocktail</h3><p>Mix ingredients, liquid effects, glitter, and decoration in a tactile mobile toy.</p></div></a>
+        <a class="project-card" href="ShootingBalls.html" data-project-category="game"><div class="project-media"><img src="img/projects/ShootingBalls/gif.gif" alt="Shooting Balls gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Puzzle game</span><span>2021</span></div><h3>Shooting Balls</h3><p>Aim for baskets and calculate the multiplier needed to clear each level.</p></div></a>
+        <a class="project-card" href="TypeIt.html" data-project-category="game"><div class="project-media"><img src="img/projects/TypeIt/gif.gif" alt="Type It 3D gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Typing game</span><span>2021</span></div><h3>Type It 3D</h3><p>Turn mechanical keyboard input into movement through a short arcade course.</p></div></a>
+        <a class="project-card" href="FillIn.html" data-project-category="game"><div class="project-media"><img src="img/projects/FillIn/gif.gif" alt="Fill In gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Spatial puzzle</span><span>2021</span></div><h3>Fill In</h3><p>Cover every tile without crossing a completed path.</p></div></a>
+        <a class="project-card" href="PoppingBalloons.html" data-project-category="game"><div class="project-media"><img src="img/projects/PoppingBalloons/gif.gif" alt="Popping Balloons gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Obstacle runner</span><span>2021</span></div><h3>Popping Balloons</h3><p>Guide a needle through hazards and line up satisfying chains of pops.</p></div></a>
+        <a class="project-card" href="ReachToSpace.html" data-project-category="game"><div class="project-media"><img src="img/projects/ReachToSpace/1.gif" alt="Reach to Space gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Educational game</span><span>2021</span></div><h3>Reach to Space</h3><p>Manage fuel and solve quick arithmetic questions on a rocket journey.</p></div></a>
+        <a class="project-card" href="Union.html" data-project-category="app"><div class="project-media"><img src="img/projects/Union/icon.png" alt="Union App icon" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Mobile application</span><span>2021</span></div><h3>Union App</h3><p>A collaborative social application concept for discussions, events, and messages.</p></div></a>
+        <a class="project-card" href="EmojiBil.html" data-project-category="game"><div class="project-media"><img src="img/projects/EmojiBil/icon.png" alt="Emoji Puzzle icon" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Word puzzle</span><span>2020</span></div><h3>Emoji Puzzle</h3><p>Decode familiar expressions using compact emoji clues and a letter bank.</p></div></a>
+        <a class="project-card" href="ConfessIt.html" data-project-category="web"><div class="project-media"><img src="img/projects/ConfessIt/5.PNG" alt="Confess It database structure" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Web application</span><span>2019</span></div><h3>Confess It</h3><p>A full-stack social prototype with posts, profiles, messaging, and notifications.</p></div></a>
+        <a class="project-card" href="MrRobot.html" data-project-category="app"><div class="project-media"><img src="img/projects/MrRobot/icon.PNG" alt="Mr. Robot Chat Game icon" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Chat game</span><span>2015</span></div><h3>Mr. Robot Chat Game</h3><p>An early Android experiment in branching replies and conversational interaction.</p></div></a>
+        <a class="project-card" href="LazerDefenser.html" data-project-category="learning"><div class="project-media"><img src="img/projects/LazerDefenser/icon.PNG" alt="Laser Defender artwork" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Arcade study</span><span>Unity 2D</span></div><h3>Laser Defender</h3><p>A classic shooter study covering waves, projectiles, scoring, and feedback.</p></div></a>
+        <a class="project-card" href="BlockBreaker.html" data-project-category="learning"><div class="project-media"><img src="img/projects/BlockBreaker/icon.PNG" alt="Block Breaker artwork" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Physics study</span><span>Unity 2D</span></div><h3>Block Breaker</h3><p>A focused brick-breaker exercise in physics, levels, sound, and game state.</p></div></a>
+      </div>
+    </section>
 
-	<title>KUTAY SENYIGIT</title>
+    <section class="section section-divider shell">
+      <div class="capability-strip">
+        <div><p class="eyebrow">More than screenshots</p><h2>Three demos run in the browser.</h2><p>The interactive lab preserves working WebGL tools for drawing, keyframe animation, and real-time shading.</p></div>
+        <div><a class="button button-arrow" href="index.html#lab">Open the interactive lab</a></div>
+      </div>
+    </section>
+  </main>
 
-	</head>
-	   <body>
-	   
-<!--- PAGE LOADING --->	
-<div class="preloading fadeIn">	   
-	   
-		<!--- NAV BAR --->
-		<div class="nav-ttl" onclick="window.location.href='index.html'">
-	
-					  KUTAY SENYIGIT  
-		</div>
-			
-	<div class="right-menu">
-				<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary-menu" onclick="window.location.href='index.html'">
-						Home
-					</button>
-					<button type="button" class="btn btn-primary-menu"  onclick="window.location.href='works.html'">
-						Projects
-					</button>
-					<button type="button" class="btn btn-primary-menu"  onclick="window.location.href='resume.pdf'">
-						Resume
-					</button>
-					<button type="button" class="btn btn-primary-menu"  onclick="window.location.href='about.html'">
-						About & Contact
-					</button>
-					<button type="button" class="btn btn-primary-menu" data-toggle="modal" data-target="#exampleModalLong">
-						Menu
-					</button>
-
-				<!-- Modal -->
-			<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header-menu">
-					<div class="menu-t">
-					    <div class="open-menu-title">
-						Kutay Senyigit
-						</div>
-						<div> 
-						<a class="menu-links" href="index.html"> Home </a>
-						</div>
-						<div class="menu-links-on" > 
-						Projects
-						</div> 
-						<div> 
-						<a class="menu-links" href="logos.html"> Logo Collection </a>
-						</div>
-						<div> 
-						<a class="menu-links" href="about.html"> About & Contact </a>
-						</div>
-						<div> 
-						<a class="menu-links" href="blog.html"> Blog </a>
-						</div>
-						<button type="button" class="menu-close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-				</div>
-			</div>
-				</div>
-				</div>
-		</div>		  
-	
-	<!--- THE END NAV BAR ---> 
-
-	    <div class="container">
-
-		<!--- HERO HEADER --->
-	            <div class="row">
-	                <div class="col-md-12">
-                       <div class="works-hero-bg" >
-					        <h1 class="fade-anime-top"> My Games Tested with the top Publishers! </h1>
-                          								
-                       </div>
-	                </div>
-				</div>
-		<!--- THE END HERO HEADER --->				
-		
-
-		<!--- WORK PAGE PROJECTS --->
-			    <div class="row">
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="StackPush.html"> <img src="img/projects/StackPush/pushPP.png" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-left-wrk"> <a href="StackPush.html"> </div>
-							  <div class="shw-cs2">  Push Stacks </div>
-							  <div class="shw-cs4"> It is a runner-type, mobile hyper-casual game created by Unity. It is tested. You need to pass through from the correct multipliers to increase your stacks, allowing you to get stronger. By using your stack power, push your enemy and beat the game! </div>
-							  <div class="shw-cs"> An Indie Hyper Casual Game Created by Unity <br>
-							  Keywords: Unity 3D, Adobe Illustrator, Adobe Photoshop, Davinci Resolve, Skybox coloring with Shaders
-							  </div>
-						</div>					
-	                </div>
-					
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="Cocktail.html"> <img src="img/projects/Cocktail/cocktail.png" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-right-wrk"> <a href="Cocktail.html"> </div>
-							  <div class="shw-cs2"> DIY Cocktail </div>
-							  <div class="shw-cs4"> It is a DIY cocktail mobile hyper-casual game created by Unity and tested by 
-								 You can pick whatever fruit, syrup, liquid, glitter, or decoration you want. Finally, you will have a unique cocktail! </div>
-							  <div class="shw-cs"> An Indie Hyper Casual Game Created by Unity<br>
-							  Keywords: Unity 3D, Shader Development, Adobe Illustrator, Adobe Photoshop, Davinci Resolve</div>
-						</div>
-	                </div>
-                </div>
-
-			    <div class="row">
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="ShootingBalls.html"> <img src="img/projects/ShootingBalls/icon.png" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-left-wrk"> <a href="ShootingBalls.html"> </div>
-							  <div class="shw-cs2"> Shooting Balls </div>
-							  <div class="shw-cs4"> It is a puzzle mobile hyper-casual game created by Unity and tested. You need to aim the baskets. While doing so, you also need to calculate the multiplication you need in order to win the game. </div>
-							  <div class="shw-cs"> An Indie Hyper Casual Game Created by Unity<br>
-							  Keywords: Unity 3D, Adobe Illustrator, Adobe Photoshop, Davinci Resolve</div>
-						</div>					
-	                </div>
-					
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="TypeIt.html"> <img src="img/projects/TypeIt/finger.PNG" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-right-wrk"> <a href="TypeIt.html"> </div>
-							  <div class="shw-cs2"> Type It 3D </div>
-							  <div class="shw-cs4"> It is an ASMR-type hypercasual game created by Unity. It has flappy bird-type mechanics. You need to write the words given by using a mechanical keyboard.  </div>
-							  <div class="shw-cs">  An Indie Hyper Casual Game Created by Unity 
-							  <br>
-							  Keywords: Unity 3D, Adobe Illustrator, Adobe Photoshop, Davinci Resolve</div>
-						</div>
-	                </div>
-                </div>			
-
-			    <div class="row">
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="FillIn.html"> <img src="img/projects/FillIn/icon.png" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-left-wrk"> <a href="FillIn.html"> </div>
-							  <div class="shw-cs2"> Fill In </div>
-							  <div class="shw-cs4"> It is a puzzle mobile hyper-casual game created by Unity. You need to fill the all the gaps. However, you cannot pass through the filled area. </div>
-							  <div class="shw-cs">  An Indie Hyper Casual Game Created by Unity <br>
-							  Keywords: Unity 3D, Adobe Illustrator, Adobe Photoshop, Davinci Resolve</div>
-						</div>					
-	                </div>
-					
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="PoppingBalloons.html"> <img src="img/projects/PoppingBalloons/icon.png" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-right-wrk"> <a href="PoppingBalloons.html"> </div>
-							  <div class="shw-cs2"> Popping Balloons </div>
-							  <div class="shw-cs4"> It is an ASMR mobile hyper-casual game created by Unity and tested. You have a needle and there are many balloons. Escape from obstacles and pop all the balloons! </div>
-							  <div class="shw-cs">  An Indie Hyper Casual Game Created by Unity <br>
-							  Keywords: Unity 3D, Adobe Illustrator, Adobe Photoshop, Davinci Resolve </div>
-						</div>
-	                </div>
-                </div>
-
-			    <div class="row">
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="ReachToSpace.html"> <img src="img/projects/ReachToSpace/icon.jpg" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-left-wrk"> <a href="ReachToSpace.html"> </div>
-							  <div class="shw-cs2"> Reach To Space </div>
-							  <div class="shw-cs4"> I made this game for a startup company: OpenMyNetwork. The purpose was to teach children math. This game allows children to make simple math calculations while they are traveling the space. </div>
-							  <div class="shw-cs">  A Game for a Education Startup Created by Unity<br>
-							  Keywords: Unity 2D, Adobe Illustrator, Adobe Photoshop, Internship Remote USA</div>
-						</div>					
-	                </div>
-					
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="https://www.youtube.com/results?search_query=laser+defender"> <img src="img/projects/LazerDefenser/icon.PNG" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-right-wrk"> </div>
-							  <div class="shw-cs2"> Lazer Defender </div>
-							  <div class="shw-cs4"> A classical game from Udemy course I had taken. I made it in order to learn how to make games.</div>
-							  <div class="shw-cs">  Created While Taking Unity Course <br>
-							  Keywords: Unity 2D</div>
-						</div>
-	                </div>
-                </div>
-
-			    <div class="row">
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="https://www.google.com/search?q=block+breaker"> <img src="img/projects/BlockBreaker/icon.PNG" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-left-wrk"> </div>
-							  <div class="shw-cs2"> Block Breaker </div>
-							  <div class="shw-cs4"> A classical game from Udemy course I had taken. I made it in order to learn how to make games. </div>
-							  <div class="shw-cs"> Created While Taking Unity Course
-							  <br>
-							  Keywords: Unity 2D </div>
-						</div>					
-	                </div>
-					
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="Union.html"> <img src="img/projects/Union/icon.png" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-right-wrk"> <a href="Union.html"> </div>
-							  <div class="shw-cs2"> Union App </div>
-							  <div class="shw-cs4">  It is A social network application that is made for my university course project CS102. It is made by using Android Studio and Firebase for Database System.</div>
-							  <div class="shw-cs"> A Mobile Social Application Developed for University Course Project by Team
-							  <br>
-							  Keywords: Android Studio, Firebase, Mail API, Adobe Illustrator, Adobe Photoshop, Notification, Messaging, Profile, User Searching, Posting, Teamwork</div>
-						</div>
-	                </div>
-                </div>				
-					
-			    <div class="row">
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="EmojiBil.html"> <img src="img/projects/EmojiBil/icon.png" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-left-wrk"> <a href="EmojiBil.html"></div>
-							  <div class="shw-cs2"> Emoji Bil! </div>
-							  <div class="shw-cs4"> A word puzzle game made for entertainment. It's made by using Android Studio. It includes an in-app purchases feature. </div>
-							  <div class="shw-cs"> Indie Mobile Word Puzzle Game Developed with Android Studio 
-							  <br>
-							  Keywords: Android Studio, in-app purchases, Adsense, Adobe Illustrator, Adobe Photoshop, Davinci Resolve</div>							  
-						</div>					
-	                </div>
-					
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="ConfessIt.html"> <img src="img/projects/ConfessIt/icon.PNG" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-right-wrk"> <a href="ConfessIt.html"> </div>
-							  <div class="shw-cs2"> Confess it! </div>
-							  <div class="shw-cs4"> It is a web-based social network project. It's made by using HTML, PHP, JavaScript, MySQL. </div>
-							  <div class="shw-cs"> Indie Web-based Social Network Project <br>
-							  Keywords: Notification, Messaging, Profile, User Searching, Posting</div>
-						</div>
-	                </div>
-                </div>
-				 <div class="row">
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="https://dnsmalimusavirlik.com/"> <img src="img/projects/DNS/icon.PNG" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-left-wrk"> <a href="https://dnsmalimusavirlik.com/"></div>
-							  <div class="shw-cs2"> DNS Malivusarilik </div>
-							  <div class="shw-cs4"> A company's website made by wordpress.</div>
-							  <div class="shw-cs"> A WordPress based website for a financial advisory company
-							  <br>
-							  Keywords: Wordpress, Hosting, Domain </div>							  
-						</div>					
-	                </div>
-					
-	                <div class="col-md-6 col-xs-12">
-                        <div class="prjct-bg" >					
-					            <a href="MrRobot.html"> <img src="img/projects/MrRobot/icon.PNG" alt="" class="img-prjct-wrk"> </a>
-					          <div class="prjct-wrt-right-wrk"> <a href="MrRobot.html"> </div>
-							  <div class="shw-cs2"> Mr Robot </div>
-							  <div class="shw-cs4"> Mobile Chat Game developed by using android studio. Currently, it supports only Turkish. It is one of my first android applications. I joined a competition with this app in high school. The main aim is to chat with a robot when you get bored.</div>
-							  <div class="shw-cs"> Indie Mobile Chat Game Developed with Android Studio <br>
-							  Keywords: Android Studio, Adobe Photoshop, TUBITAK</div>
-						</div>
-	                </div>
-                </div>
-				
-        </div>				
-        <!--- THE END WORK PAGE PROJECTS --->				
-		
-
-		
-        <!--- ABOUT & LOGOS BUTTON --->
-        <div class="container">
-	            <div class="row">
-	                <div class="col-md-6 col-xs-6">
-                       <div class="allprojects-bg" >
-				           <a class="btn-ltstlk" href="about.html" role="button">ABOUT</a>				
-                       </div>
-	                </div>
-		
-	                <div class="col-md-6 col-xs-6">
-                       <div class="allprojects-bg" >
-				           <a class="btn-ltstlk" href="resume.pdf" role="button">RESUME</a>				
-                       </div>
-	                </div>
-				</div>	
-        </div>				
-		<!--- THE END ABOUT & LOGOS BUTTON --->
-	<!--- FOOTER --->
-		<div class="container">
-	            <div class="row">
-                       <div class="footer-bg" >
-					      <div class="col-md-4 col-xs-12">
-						    <div class="shw-cs3"> Get in Touch </div>
-						    <a href="mailto:kutaysenyigit@gmail.com"> <div class="ftr-lnk"> kutaysenyigit@gmail.com </div> </a>
-                            </div>
-
-					      <div class="col-md-4 col-xs-6">
-							<a target="_blank" href="http://youtube.com/KutayŞenyiğit"> <div class="ftr-lnk"> Youtube </div> </a>
-							<a target="_blank" href="http://instagram.com/kutaysenyigit"> <div class="ftr-lnk"> Instagram </div> </a>
-							<a target="_blank" href="https://www.linkedin.com/in/kutay-%C5%9Fenyi%C4%9Fit-60ba50170/"> <div class="ftr-lnk"> Linkedin </div> </a>
-                          </div>						  
-
-					      <div class="col-md-4 col-xs-6">
-
-					      	<a href="works.html"> <div class="ftr-lnk"> Home </div> </a>
-							<div class="ftr-lnk-on"> Projects </div>
-							<a href="about.html"> <div class="ftr-lnk"> About & Contact </div> </a>
-						
-                          </div>						  
-							
-	                      
-				       </div>
-				</div>
-		</div>		
-		<!--- THE END FOOTER --->				
-        
-		<!--- SCRIPTS --->
-	            <script src="js/jquery-2.1.1.js"></script>
-                <script src="js/main.js"></script>
-				<script src="js/bootstrap.min.js"></script>
-		<!--- THW END SCRIPTS --->			
-</div>
-<!--- THE PAGE LOADING --->		
-		
-		</body>		
-		
+  <footer class="site-footer">
+    <div class="footer-shell shell">
+      <p class="footer-copy">© <span data-current-year></span> Game Maker Portfolio. Built around playable work.</p>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="index.html#lab">Interactive lab</a><a href="about.html">About the work</a></nav>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
 </html>
