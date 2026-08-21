@@ -4,163 +4,147 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="An anonymous independent game developer portfolio featuring mobile games, interactive prototypes, and WebGL experiments.">
-  <meta name="theme-color" content="#070b12">
-  <meta property="og:title" content="Game Maker Portfolio">
-  <meta property="og:description" content="Small games. Clear ideas. Playable results.">
+  <meta name="theme-color" content="#07090e">
+  <meta property="og:title" content="Trelans">
+  <meta property="og:description" content="Ideas become playable worlds.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://trelans.xyz/img/og-game-maker.png">
+  <meta property="og:image" content="https://trelans.xyz/img/og-trelans.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Game Maker Portfolio">
-  <meta name="twitter:description" content="Small games. Clear ideas. Playable results.">
-  <meta name="twitter:image" content="https://trelans.xyz/img/og-game-maker.png">
+  <meta name="twitter:title" content="Trelans">
+  <meta name="twitter:description" content="Ideas become playable worlds.">
+  <meta name="twitter:image" content="https://trelans.xyz/img/og-trelans.png">
   <link rel="icon" href="img/favicon.PNG">
   <link rel="stylesheet" href="css/style.css">
-  <title>Game Maker Portfolio — Independent Games and Experiments</title>
+  <title>Trelans — Independent Games and Experiments</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="nav-shell shell">
-      <a class="brand" href="index.html" aria-label="Game Maker Portfolio home">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span class="brand-label">Game Maker <small>Independent portfolio</small></span>
+      <a class="brand" href="index.html" aria-label="Trelans home">
+        <span class="brand-mark" aria-hidden="true">TR</span>
+        <span class="brand-label">Trelans <small>Games &amp; interactive work</small></span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle><span></span></button>
       <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
         <a href="index.html" aria-current="page">Home</a>
         <a href="works.html">Projects</a>
-        <a href="#lab">Interactive lab</a>
-        <a href="about.html">About the work</a>
+        <a href="lab.html">Demo lab</a>
+        <a href="about.html">About</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero shell">
-      <div class="hero-copy">
-        <p class="eyebrow">Independent game development</p>
-        <h1>Small games. Clear ideas. <span>Playable results.</span></h1>
-        <p>This portfolio collects mobile games, playful applications, and real-time graphics experiments—designed, built, and refined from concept to working prototype.</p>
-        <div class="hero-actions">
-          <a class="button button-arrow" href="works.html">Explore the projects</a>
-          <a class="button button-secondary" href="#lab">Try interactive demos</a>
+    <section class="hero-stage shell" aria-labelledby="hero-title">
+      <div class="hero-intro">
+        <div class="hero-copy">
+          <p class="eyebrow">Independent game maker</p>
+          <h1 id="hero-title">Ideas become <span>playable worlds.</span></h1>
+          <p>Mobile games, interactive prototypes, and real-time graphics experiments—shaped from a focused mechanic into a complete playable build.</p>
+          <div class="hero-actions">
+            <a class="button button-arrow" href="works.html">Explore 13 projects</a>
+            <a class="button button-secondary" href="lab.html">Open the demo lab</a>
+          </div>
         </div>
+        <dl class="hero-stats" aria-label="Portfolio highlights">
+          <div><dt>13</dt><dd>Finished builds</dd></div>
+          <div><dt>03</dt><dd>Browser demos</dd></div>
+          <div><dt>2D / 3D</dt><dd>Game systems</dd></div>
+        </dl>
       </div>
-      <div class="hero-visual" aria-label="Selected game screens">
-        <div class="hero-orbit" aria-hidden="true"></div>
-        <figure class="screen-card screen-card-main">
-          <img src="img/projects/StackPush/1.jpg" alt="Push Stacks mobile game screen">
-          <figcaption>Push Stacks · Unity 3D</figcaption>
-        </figure>
-        <figure class="screen-card screen-card-left">
-          <img src="img/projects/Cocktail/1.jpg" alt="DIY Cocktail mobile game screen">
-          <figcaption>DIY Cocktail</figcaption>
-        </figure>
-        <figure class="screen-card screen-card-right">
-          <img src="img/projects/ShootingBalls/1.gif" alt="Shooting Balls mobile game screen">
-          <figcaption>Shooting Balls</figcaption>
-        </figure>
-        <span class="hero-note" aria-hidden="true">Built to play</span>
-      </div>
+
+      <a class="hero-feature" href="ReachToSpace.html" aria-label="View the Reach to Space case study">
+        <img src="img/projects/ReachToSpace/icon.jpg" alt="Reach to Space game artwork">
+        <div class="hero-feature-bar">
+          <span><i aria-hidden="true"></i> Featured build</span>
+          <span>Unity 2D · Educational arcade</span>
+        </div>
+        <div class="hero-feature-caption">
+          <div><p>Fuel, flight, and quick arithmetic</p><h2>Reach to Space</h2></div>
+          <span class="round-link" aria-hidden="true">↗</span>
+        </div>
+      </a>
     </section>
 
     <section class="section section-divider shell" aria-labelledby="featured-title">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Selected work</p>
-          <h2 id="featured-title">Games with a focused hook.</h2>
+          <h2 id="featured-title">One clear hook.<br>Built all the way through.</h2>
         </div>
-        <p>Each project starts with one readable interaction, then builds feedback, art direction, and progression around it.</p>
+        <p>Each project starts with a readable interaction, then adds game feel, visual language, and just enough progression to make the idea sing.</p>
       </div>
-      <div class="project-grid">
-        <a class="project-card project-card-wide" href="StackPush.html">
-          <div class="project-media"><img src="img/projects/StackPush/gif.gif" alt="Push Stacks gameplay" loading="lazy"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Runner game</span><span>Unity 3D</span></div>
-            <h3>Push Stacks</h3>
-            <p>Choose the right multipliers, grow a stronger crowd, and turn the stack into a final push.</p>
-          </div>
-        </a>
-        <a class="project-card project-card-narrow" href="Cocktail.html">
-          <div class="project-media"><img src="img/projects/Cocktail/cocktail.png" alt="DIY Cocktail game artwork" loading="lazy"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Creative game</span><span>Shaders</span></div>
-            <h3>DIY Cocktail</h3>
-            <p>A tactile drink-making toy with fruit, color, glitter, and liquid effects.</p>
-          </div>
-        </a>
-        <a class="project-card" href="ShootingBalls.html">
-          <div class="project-media"><img src="img/projects/ShootingBalls/gif.gif" alt="Shooting Balls gameplay" loading="lazy"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Puzzle game</span><span>Unity 3D</span></div>
-            <h3>Shooting Balls</h3>
-            <p>Aim for baskets, calculate the multiplier, and build enough volume to clear the board.</p>
-          </div>
-        </a>
-        <a class="project-card" href="ReachToSpace.html">
-          <div class="project-media"><img src="img/projects/ReachToSpace/1.gif" alt="Reach to Space gameplay" loading="lazy"></div>
-          <div class="project-body">
-            <div class="project-meta"><span>Educational game</span><span>Unity 2D</span></div>
-            <h3>Reach to Space</h3>
-            <p>Guide a rocket, manage fuel, and solve quick arithmetic questions between hazards.</p>
-          </div>
-        </a>
-      </div>
-      <div class="section-tight"><a class="text-link" href="works.html">See the full project archive</a></div>
-    </section>
 
-    <section class="section section-divider shell" id="lab" aria-labelledby="lab-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Interactive lab</p>
-          <h2 id="lab-title">Open the tools. Try the ideas.</h2>
-        </div>
-        <p>Browser-based experiments in drawing, animation, lighting, geometry, and real-time rendering.</p>
+      <div class="featured-grid">
+        <a class="feature-card feature-card--primary" href="StackPush.html">
+          <img src="img/projects/StackPush/1.jpg" alt="" loading="lazy">
+          <div class="feature-card-top"><span>Runner game</span><span>Unity 3D · 2021</span></div>
+          <div class="feature-card-copy"><div><h3>Push Stacks</h3><p>Choose the right multipliers, build a stronger crowd, and turn the stack into a final push.</p></div><span class="card-arrow" aria-hidden="true">↗</span></div>
+        </a>
+
+        <a class="feature-card" href="Cocktail.html">
+          <img src="img/projects/Cocktail/d.png" alt="" loading="lazy">
+          <div class="feature-card-top"><span>Creative game</span><span>Shaders</span></div>
+          <div class="feature-card-copy"><div><h3>DIY Cocktail</h3><p>Mix fruit, color, glitter, and liquid effects in a compact creative toy.</p></div><span class="card-arrow" aria-hidden="true">↗</span></div>
+        </a>
+
+        <a class="feature-card" href="ShootingBalls.html">
+          <img src="img/projects/ShootingBalls/icon.png" alt="" loading="lazy">
+          <div class="feature-card-top"><span>Puzzle game</span><span>Unity 3D</span></div>
+          <div class="feature-card-copy"><div><h3>Shooting Balls</h3><p>Aim, multiply, and build enough volume to clear the board.</p></div><span class="card-arrow" aria-hidden="true">↗</span></div>
+        </a>
       </div>
-      <div class="lab-grid">
-        <a class="lab-card" href="paint.html" style="--lab-accent: var(--lime)">
-          <span class="lab-index">Experiment 01</span>
-          <div><h3>Paint Art 2D</h3><p>A layered WebGL drawing tool with brushes, selection, undo, zoom, and save/load controls.</p></div>
-        </a>
-        <a class="lab-card" href="figure.html" style="--lab-accent: var(--violet)">
-          <span class="lab-index">Experiment 02</span>
-          <div><h3>Motion Lab</h3><p>Pose an articulated figure, build keyframes, edit a timeline, and play the resulting animation.</p></div>
-        </a>
-        <a class="lab-card" href="breather.html" style="--lab-accent: var(--cyan)">
-          <span class="lab-index">Experiment 03</span>
-          <div><h3>Shader Study</h3><p>Explore a parametric surface using wireframe, Phong, and Gouraud shading controls.</p></div>
-        </a>
+
+      <div class="section-foot">
+        <p>Games, application prototypes, and foundational studies live together in the full archive.</p>
+        <a class="text-link" href="works.html">Browse every project</a>
       </div>
     </section>
 
-    <section class="section shell">
-      <div class="capability-strip">
-        <div>
-          <p class="eyebrow">From idea to build</p>
-          <h2>Game-making across disciplines.</h2>
-          <p>The work connects mechanics, code, visual systems, interface design, and rapid testing in one practical workflow.</p>
+    <section class="lab-band" id="lab" aria-labelledby="lab-title">
+      <div class="section shell">
+        <div class="section-heading">
+          <div><p class="eyebrow">Interactive demo lab</p><h2 id="lab-title">Open the tools.<br>Move the pixels.</h2></div>
+          <p>Three original browser experiments turn drawing, animation, and real-time shading into something you can use—not just watch.</p>
         </div>
-        <ul class="capability-list">
-          <li>Gameplay prototyping</li>
-          <li>Unity development</li>
-          <li>2D and 3D art</li>
-          <li>Shader experiments</li>
-          <li>Mobile interaction</li>
-          <li>WebGL tools</li>
-        </ul>
+
+        <div class="lab-grid">
+          <a class="lab-card" href="paint.html" style="--lab-accent: var(--acid)">
+            <div class="demo-preview preview-paint" aria-hidden="true"><span class="demo-toolbar"></span><span class="demo-layer-stack"></span><i></i><i></i><i></i></div>
+            <div class="lab-card-body"><div class="lab-card-topline"><span>Experiment 01</span><span class="lab-status">Playable</span></div><h3>Paint Art 2D</h3><p>A layered WebGL drawing tool with brushes, selection, undo, zoom, and save/load controls.</p><span class="lab-launch">Launch experiment</span></div>
+          </a>
+
+          <a class="lab-card" href="figure.html" style="--lab-accent: var(--violet)">
+            <div class="demo-preview preview-motion" aria-hidden="true"><span class="motion-node"></span><span class="motion-node"></span><span class="motion-node"></span><span class="motion-node"></span><span class="motion-node"></span></div>
+            <div class="lab-card-body"><div class="lab-card-topline"><span>Experiment 02</span><span class="lab-status">Playable</span></div><h3>Motion Lab</h3><p>Pose an articulated figure, build keyframes, edit a timeline, and play the resulting animation.</p><span class="lab-launch">Launch experiment</span></div>
+          </a>
+
+          <a class="lab-card" href="breather.html" style="--lab-accent: var(--sky)">
+            <div class="demo-preview preview-shader" aria-hidden="true"><span class="shader-orb"></span></div>
+            <div class="lab-card-body"><div class="lab-card-topline"><span>Experiment 03</span><span class="lab-status">Playable</span></div><h3>Shader Study</h3><p>Explore a parametric surface using wireframe, Phong, and Gouraud shading controls.</p><span class="lab-launch">Launch experiment</span></div>
+          </a>
+        </div>
+
+        <div class="section-foot"><p>The lab works best in a desktop-sized browser.</p><a class="text-link" href="lab.html">Visit the full demo lab</a></div>
+      </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="craft-title">
+      <div class="craft-panel">
+        <div><p class="eyebrow">From idea to build</p><h2 id="craft-title">Game-making across the whole stack.</h2><p>The work connects mechanics, code, visual systems, and rapid testing in one practical workflow.</p></div>
+        <div class="craft-grid">
+          <article class="craft-cell"><span>01</span><h3>Gameplay systems</h3><p>Focused loops, responsive input, progression, and readable feedback.</p></article>
+          <article class="craft-cell"><span>02</span><h3>Unity development</h3><p>2D and 3D prototypes built in C# from mechanic to complete flow.</p></article>
+          <article class="craft-cell"><span>03</span><h3>Visual direction</h3><p>Interfaces, particles, shaders, and art that explain the rules.</p></article>
+          <article class="craft-cell"><span>04</span><h3>Web and WebGL</h3><p>Interactive graphics tools and application prototypes for the browser.</p></article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-shell shell">
-      <p class="footer-copy">© <span data-current-year></span> Game Maker Portfolio. Built around playable work.</p>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="works.html">Projects</a>
-        <a href="index.html#lab">Interactive lab</a>
-        <a href="about.html">About the work</a>
-      </nav>
-    </div>
+    <div class="footer-shell shell"><p class="footer-copy">© <span data-current-year></span> Trelans. Built around playable work.</p><nav class="footer-nav" aria-label="Footer navigation"><a href="works.html">Projects</a><a href="lab.html">Demo lab</a><a href="about.html">About</a></nav></div>
   </footer>
   <script src="js/site.js"></script>
 </body>

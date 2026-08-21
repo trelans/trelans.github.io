@@ -1,4 +1,4 @@
-# Game Maker Portfolio
+# Trelans
 
 An anonymous static portfolio for independent game projects and browser-based graphics experiments.
 

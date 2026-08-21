@@ -6,7 +6,7 @@
       year: "2021",
       platform: "Unity 3D",
       lede: "A bright runner about choosing multipliers, building a stronger stack, and using that momentum at the finish.",
-      cover: "img/projects/StackPush/gif.gif",
+      cover: "img/projects/StackPush/1.jpg",
       overview: "Push Stacks turns simple arithmetic choices into a readable runner loop. Gates change the size of the player group, obstacles test positioning, and the accumulated stack becomes the payoff in a final push.",
       challenge: "Keep the level readable while changing group size, color, and skybox treatment at speed.",
       approach: "A custom transparent material, randomized sky palettes, and high-contrast gate values keep the action clear without slowing the run.",
@@ -20,7 +20,7 @@
       year: "2021",
       platform: "Unity 3D",
       lede: "A tactile drink-making game that combines ingredient selection, liquid effects, decoration, and a playful reveal.",
-      cover: "img/projects/Cocktail/gif.gif",
+      cover: "img/projects/Cocktail/d.png",
       overview: "DIY Cocktail is a compact creative toy built around mixing a one-of-a-kind drink. Players cut fruit, choose liquids and glitter, then finish the glass with a decorative garnish.",
       challenge: "Create convincing liquid and glitter effects while keeping the interaction lightweight enough for a casual mobile game.",
       approach: "The prototype used dedicated shader studies before the final mechanics were assembled around quick, satisfying steps and clear visual feedback.",
@@ -34,7 +34,7 @@
       year: "2021",
       platform: "Unity 3D",
       lede: "A compact aim-and-multiply puzzle where every shot changes the number of balls available for the next target.",
-      cover: "img/projects/ShootingBalls/gif.gif",
+      cover: "img/projects/ShootingBalls/icon.png",
       overview: "Shooting Balls combines an aiming gesture with arithmetic choices. The player lines up a basket, passes through multiplier gates, and builds enough volume to clear the level.",
       challenge: "Make the balls feel lively and responsive without sacrificing clarity when many objects appear at once.",
       approach: "Paint splashes, impact feedback, and deliberate color changes reinforce successful shots while the gate layout keeps the calculation legible.",
@@ -48,7 +48,7 @@
       year: "2021",
       platform: "Unity 3D",
       lede: "A typing runner that turns a mechanical keyboard into an obstacle course and rewards rhythm at the finish.",
-      cover: "img/projects/TypeIt/gif.gif",
+      cover: "img/projects/TypeIt/finger.PNG",
       overview: "Type It 3D translates keyboard input into movement through a short arcade course. Each correct key advances the run, while missed timing limits the final score multiplier.",
       challenge: "Connect physical-feeling key feedback with readable on-screen prompts and continuous movement.",
       approach: "The prototype focuses on crisp sound, clear letter states, and a simple input loop that can be understood within seconds.",
@@ -62,7 +62,7 @@
       year: "2021",
       platform: "Unity 3D",
       lede: "A one-stroke spatial puzzle about covering every open tile without crossing an already completed path.",
-      cover: "img/projects/FillIn/gif.gif",
+      cover: "img/projects/FillIn/icon.png",
       overview: "Fill In presents a compact board and one rule: cover every available cell. The path cannot cross itself, turning a simple swipe into a planning problem.",
       challenge: "Communicate valid movement and completion clearly on a small screen with very little interface chrome.",
       approach: "Strong tile states, a restricted palette, and a celebratory particle finish keep the puzzle legible and rewarding.",
@@ -76,7 +76,7 @@
       year: "2021",
       platform: "Unity 3D",
       lede: "A colorful obstacle runner built around the simple satisfaction of guiding a needle through rows of balloons.",
-      cover: "img/projects/PoppingBalloons/gif.gif",
+      cover: "img/projects/PoppingBalloons/2.PNG",
       overview: "Popping Balloons uses a single drag gesture to steer through hazards and line up satisfying chains of balloon pops. The course gradually adds tighter gaps and timing challenges.",
       challenge: "Build a first 3D mobile prototype while keeping the collision feedback immediate and visually generous.",
       approach: "Focused controls, layered particles, and distinct obstacle silhouettes make the interaction easy to read at runner speed.",
@@ -90,7 +90,7 @@
       year: "2021",
       platform: "Unity 2D",
       lede: "A space journey that folds quick arithmetic questions into fuel management and arcade movement.",
-      cover: "img/projects/ReachToSpace/1.gif",
+      cover: "img/projects/ReachToSpace/icon.jpg",
       overview: "Reach to Space was created for an education-focused startup. Players guide a rocket, collect fuel, avoid hazards, and answer short math questions to continue the trip.",
       challenge: "Balance learning prompts with movement so neither interrupts the pace of the other.",
       approach: "Short question breaks, a persistent fuel goal, and a clear space-themed interface connect the educational layer to the core journey.",
@@ -210,50 +210,80 @@
     "block-breaker": "BlockBreaker.html"
   };
 
-  document.title = `${project.title} — Game Maker Portfolio`;
+  const accents = {
+    "push-stacks": "#c8ff5c",
+    "diy-cocktail": "#ff7e75",
+    "shooting-balls": "#64d4ff",
+    "type-it": "#a58dff",
+    "fill-in": "#c8ff5c",
+    "popping-balloons": "#ff7e75",
+    "reach-to-space": "#64d4ff",
+    "union-app": "#a58dff",
+    "emoji-puzzle": "#ffcc5c",
+    "confess-it": "#64d4ff",
+    "mr-robot": "#a58dff",
+    "laser-defender": "#ff7e75",
+    "block-breaker": "#c8ff5c"
+  };
+
+  document.title = `${project.title} — Trelans`;
+  page.style.setProperty("--project-accent", accents[page.dataset.project] || "#c8ff5c");
   const description = document.querySelector('meta[name="description"]');
   if (description) description.content = project.lede;
 
   const tags = project.tags.map((tag) => `<li>${tag}</li>`).join("");
   const gallery = project.gallery.length
     ? `<section class="gallery-section shell" aria-labelledby="gallery-title">
-        <h2 id="gallery-title">Project frames</h2>
+        <div class="gallery-heading">
+          <div><p class="eyebrow">Inside the build</p><h2 id="gallery-title">Gameplay and interface.</h2></div>
+          <p>Selected frames show the interaction, visual language, and moment-to-moment feedback in context.</p>
+        </div>
         <div class="project-gallery">
-          ${project.gallery.map((image, index) => `<figure class="gallery-item"><img src="${image}" alt="${project.title} project frame ${index + 1}" loading="lazy"></figure>`).join("")}
+          ${project.gallery.map((image, index) => `<figure class="gallery-item"><img src="${image}" alt="Gameplay and interface view ${index + 1} from ${project.title}" loading="lazy"></figure>`).join("")}
         </div>
       </section>`
     : "";
 
   page.innerHTML = `
-    <section class="project-hero shell">
-      <div>
+    <section class="project-head shell">
+      <a class="project-back" href="works.html">Projects / ${project.title}</a>
+      <div class="project-head-grid">
+        <div class="project-title-block">
         <p class="project-kicker">${project.category}</p>
         <h1>${project.title}</h1>
         <p>${project.lede}</p>
+          <ul class="tag-list" aria-label="Tools and disciplines">${tags}</ul>
+        </div>
+        <dl class="project-facts">
+          <div><dt>Built</dt><dd>${project.year}</dd></div>
+          <div><dt>Platform</dt><dd>${project.platform}</dd></div>
+          <div><dt>Format</dt><dd>Case study</dd></div>
+        </dl>
       </div>
-      <dl class="project-facts">
-        <div><dt>Built</dt><dd>${project.year}</dd></div>
-        <div><dt>Platform</dt><dd>${project.platform}</dd></div>
-      </dl>
     </section>
-    <figure class="project-cover shell"><img src="${project.cover}" alt="${project.title} project preview"></figure>
+    <figure class="project-cover shell">
+      <div class="project-cover-media"><img src="${project.cover}" alt="Featured visual from ${project.title}"></div>
+      <figcaption><span>Featured build</span><span>${project.category} / ${project.platform}</span></figcaption>
+    </figure>
     <section class="project-overview shell" aria-labelledby="overview-title">
-      <div>
+      <div class="overview-index">
+        <span>01</span>
         <p class="eyebrow">Case study</p>
-        <h2 id="overview-title">The idea and the craft.</h2>
+        <h2 id="overview-title">Core loop and build choices.</h2>
       </div>
       <div class="project-story">
         <p>${project.overview}</p>
-        <ul class="tag-list" aria-label="Tools and disciplines">${tags}</ul>
         <div class="story-grid">
-          <article class="story-card"><h3>The challenge</h3><p>${project.challenge}</p></article>
-          <article class="story-card"><h3>The approach</h3><p>${project.approach}</p></article>
+          <article class="story-card"><span>Constraint</span><h3>The challenge</h3><p>${project.challenge}</p></article>
+          <article class="story-card"><span>Build decision</span><h3>The approach</h3><p>${project.approach}</p></article>
         </div>
       </div>
     </section>
     ${gallery}
     <section class="next-project shell">
-      <div><p>Next project</p><h2>${next.title}</h2></div>
-      <a class="button button-arrow" href="${fileByKey[project.next]}">Open case study</a>
+      <a class="next-project-card" href="${fileByKey[project.next]}">
+        <img src="${next.cover}" alt="" loading="lazy">
+        <span class="next-project-card-content"><span><p>Next project</p><h2>${next.title}</h2></span><span class="round-link" aria-hidden="true">↗</span></span>
+      </a>
     </section>`;
 })();

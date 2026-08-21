@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Trelans demo lab: three playable browser experiments for drawing, keyframe animation, and real-time shading.">
+  <meta name="theme-color" content="#07090e">
+  <meta property="og:title" content="Demo Lab — Trelans">
+  <meta property="og:description" content="Open the tools and experiment with drawing, motion, and real-time graphics.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://trelans.xyz/img/og-trelans.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Demo Lab — Trelans">
+  <meta name="twitter:description" content="Open the tools and experiment with drawing, motion, and real-time graphics.">
+  <meta name="twitter:image" content="https://trelans.xyz/img/og-trelans.png">
+  <link rel="icon" href="img/favicon.PNG">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Demo Lab — Trelans</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell shell">
+      <a class="brand" href="index.html" aria-label="Trelans home"><span class="brand-mark" aria-hidden="true">TR</span><span class="brand-label">Trelans <small>Games &amp; interactive work</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle><span></span></button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
+        <a href="index.html">Home</a><a href="works.html">Projects</a><a href="lab.html" aria-current="page">Demo lab</a><a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="lab-hero shell" aria-labelledby="lab-page-title">
+      <div class="lab-hero-copy">
+        <p class="eyebrow">Interactive demo lab</p>
+        <h1 id="lab-page-title">Three tools.<br><span>Built to be touched.</span></h1>
+        <p>Drawing, keyframe animation, and real-time shading become hands-on browser experiments. Open one and move from spectator to maker.</p>
+        <a class="button button-arrow" href="#experiments">Choose an experiment</a>
+      </div>
+      <div class="lab-console" aria-hidden="true">
+        <div class="lab-console-bar"><span>Trelans / live graphics</span><span>WebGL ready</span></div>
+        <div class="lab-console-screen"><span class="lab-console-chip">Geometry / active</span><span class="lab-console-chip">Frame 01 / 60</span></div>
+      </div>
+    </section>
+
+    <section class="lab-page-grid shell" id="experiments" aria-labelledby="experiments-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Playable in browser</p><h2 id="experiments-title">Pick a mode.<br>Start experimenting.</h2></div>
+        <p>These original WebGL studies preserve their full working controls. A desktop-sized browser gives the best canvas and tool layout.</p>
+      </div>
+      <div class="lab-grid">
+        <a class="lab-card" href="paint.html" style="--lab-accent: var(--acid)">
+          <div class="demo-preview preview-paint" aria-hidden="true"><span class="demo-toolbar"></span><span class="demo-layer-stack"></span><i></i><i></i><i></i></div>
+          <div class="lab-card-body"><div class="lab-card-topline"><span>Experiment 01</span><span class="lab-status">Playable</span></div><h3>Paint Art 2D</h3><p>Draw with layered WebGL brushes, make selections, zoom, undo, and save or reload a scene.</p><span class="lab-launch">Launch paint tool</span></div>
+        </a>
+        <a class="lab-card" href="figure.html" style="--lab-accent: var(--violet)">
+          <div class="demo-preview preview-motion" aria-hidden="true"><span class="motion-node"></span><span class="motion-node"></span><span class="motion-node"></span><span class="motion-node"></span><span class="motion-node"></span></div>
+          <div class="lab-card-body"><div class="lab-card-topline"><span>Experiment 02</span><span class="lab-status">Playable</span></div><h3>Motion Lab</h3><p>Pose an articulated figure, add keyframes, edit a timeline, and play the finished motion.</p><span class="lab-launch">Launch animation tool</span></div>
+        </a>
+        <a class="lab-card" href="breather.html" style="--lab-accent: var(--sky)">
+          <div class="demo-preview preview-shader" aria-hidden="true"><span class="shader-orb"></span></div>
+          <div class="lab-card-body"><div class="lab-card-topline"><span>Experiment 03</span><span class="lab-status">Playable</span></div><h3>Shader Study</h3><p>Shape a parametric surface and compare wireframe, Phong, and Gouraud rendering modes.</p><span class="lab-launch">Launch shader tool</span></div>
+        </a>
+      </div>
+      <p class="lab-note"><strong>Desktop recommended.</strong> The original experiment interfaces use full-size canvases and dense controls; smaller screens can still open them, but a keyboard and pointer provide the intended experience.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-shell shell"><p class="footer-copy">© <span data-current-year></span> Trelans. Built around playable work.</p><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="works.html">Projects</a><a href="about.html">About</a></nav></div></footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

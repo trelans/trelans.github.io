@@ -3,88 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Games, applications, and learning projects from an anonymous independent game maker.">
-  <meta name="theme-color" content="#070b12">
-  <meta property="og:title" content="Projects — Game Maker Portfolio">
+  <meta name="description" content="Games, applications, and learning projects from Trelans.">
+  <meta name="theme-color" content="#07090e">
+  <meta property="og:title" content="Projects — Trelans">
   <meta property="og:description" content="Mobile games, playful applications, and technical studies.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://trelans.xyz/img/og-game-maker.png">
+  <meta property="og:image" content="https://trelans.xyz/img/og-trelans.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Projects — Game Maker Portfolio">
+  <meta name="twitter:title" content="Projects — Trelans">
   <meta name="twitter:description" content="Mobile games, playful applications, and technical studies.">
-  <meta name="twitter:image" content="https://trelans.xyz/img/og-game-maker.png">
+  <meta name="twitter:image" content="https://trelans.xyz/img/og-trelans.png">
   <link rel="icon" href="img/favicon.PNG">
   <link rel="stylesheet" href="css/style.css">
-  <title>Projects — Game Maker Portfolio</title>
+  <title>Projects — Trelans</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="nav-shell shell">
-      <a class="brand" href="index.html" aria-label="Game Maker Portfolio home">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span class="brand-label">Game Maker <small>Independent portfolio</small></span>
-      </a>
+      <a class="brand" href="index.html" aria-label="Trelans home"><span class="brand-mark" aria-hidden="true">TR</span><span class="brand-label">Trelans <small>Games &amp; interactive work</small></span></a>
       <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle><span></span></button>
-      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
-        <a href="index.html">Home</a>
-        <a href="works.html" aria-current="page">Projects</a>
-        <a href="index.html#lab">Interactive lab</a>
-        <a href="about.html">About the work</a>
-      </nav>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav><a href="index.html">Home</a><a href="works.html" aria-current="page">Projects</a><a href="lab.html">Demo lab</a><a href="about.html">About</a></nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="page-hero shell">
-      <p class="eyebrow">Project archive</p>
-      <h1>Designed to be <span>played.</span></h1>
-      <p>A collection of mobile games, application prototypes, and foundational studies. Every case study focuses on the interaction, technical problem, and design decisions behind the build.</p>
+    <section class="archive-hero shell" aria-labelledby="archive-title">
+      <div class="archive-copy">
+        <p class="eyebrow">Project archive</p>
+        <h1 id="archive-title">Built to be <span>played.</span></h1>
+        <p>Mobile games, application prototypes, and technical studies—each reduced to the interaction, problem, and design decisions that shaped the final build.</p>
+        <span class="archive-count"><strong>13</strong> projects across games, apps, web, and WebGL</span>
+      </div>
+      <div class="archive-visual" aria-label="Selected project artwork">
+        <figure class="archive-poster archive-poster--main"><img src="img/projects/ReachToSpace/icon.jpg" alt="Reach to Space artwork"><figcaption>Reach to Space · Unity 2D</figcaption></figure>
+        <figure class="archive-poster archive-poster--left"><img src="img/projects/StackPush/1.jpg" alt="Push Stacks game screen"><figcaption>Push Stacks</figcaption></figure>
+        <figure class="archive-poster archive-poster--right"><img src="img/projects/Cocktail/d.png" alt="DIY Cocktail artwork"><figcaption>DIY Cocktail</figcaption></figure>
+      </div>
     </section>
 
-    <section class="section shell" aria-labelledby="all-projects-title">
+    <section class="projects-section shell" aria-labelledby="all-projects-title">
       <div class="section-heading">
-        <div><p class="eyebrow">All work</p><h2 id="all-projects-title">Thirteen focused builds.</h2></div>
-        <p>Filter the archive by project type, or open any card for a concise case study.</p>
+        <div><p class="eyebrow">All work</p><h2 id="all-projects-title">Choose a build.<br>See how it works.</h2></div>
+        <p>Use the filters to scan by project type, then open any card for the complete case study.</p>
       </div>
-      <div class="filter-bar" data-project-filters aria-label="Filter projects">
-        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter-button" type="button" data-filter="game" aria-pressed="false">Games</button>
-        <button class="filter-button" type="button" data-filter="app" aria-pressed="false">Applications</button>
-        <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web</button>
-        <button class="filter-button" type="button" data-filter="learning" aria-pressed="false">Learning studies</button>
-      </div>
-      <div class="project-grid">
-        <a class="project-card" href="StackPush.html" data-project-category="game"><div class="project-media"><img src="img/projects/StackPush/gif.gif" alt="Push Stacks gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Runner game</span><span>2021</span></div><h3>Push Stacks</h3><p>Grow a stronger crowd by choosing the right multiplier gates.</p></div></a>
-        <a class="project-card" href="Cocktail.html" data-project-category="game"><div class="project-media"><img src="img/projects/Cocktail/cocktail.png" alt="DIY Cocktail artwork" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Creative game</span><span>2021</span></div><h3>DIY Cocktail</h3><p>Mix ingredients, liquid effects, glitter, and decoration in a tactile mobile toy.</p></div></a>
-        <a class="project-card" href="ShootingBalls.html" data-project-category="game"><div class="project-media"><img src="img/projects/ShootingBalls/gif.gif" alt="Shooting Balls gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Puzzle game</span><span>2021</span></div><h3>Shooting Balls</h3><p>Aim for baskets and calculate the multiplier needed to clear each level.</p></div></a>
-        <a class="project-card" href="TypeIt.html" data-project-category="game"><div class="project-media"><img src="img/projects/TypeIt/gif.gif" alt="Type It 3D gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Typing game</span><span>2021</span></div><h3>Type It 3D</h3><p>Turn mechanical keyboard input into movement through a short arcade course.</p></div></a>
-        <a class="project-card" href="FillIn.html" data-project-category="game"><div class="project-media"><img src="img/projects/FillIn/gif.gif" alt="Fill In gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Spatial puzzle</span><span>2021</span></div><h3>Fill In</h3><p>Cover every tile without crossing a completed path.</p></div></a>
-        <a class="project-card" href="PoppingBalloons.html" data-project-category="game"><div class="project-media"><img src="img/projects/PoppingBalloons/gif.gif" alt="Popping Balloons gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Obstacle runner</span><span>2021</span></div><h3>Popping Balloons</h3><p>Guide a needle through hazards and line up satisfying chains of pops.</p></div></a>
-        <a class="project-card" href="ReachToSpace.html" data-project-category="game"><div class="project-media"><img src="img/projects/ReachToSpace/1.gif" alt="Reach to Space gameplay" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Educational game</span><span>2021</span></div><h3>Reach to Space</h3><p>Manage fuel and solve quick arithmetic questions on a rocket journey.</p></div></a>
-        <a class="project-card" href="Union.html" data-project-category="app"><div class="project-media"><img src="img/projects/Union/icon.png" alt="Union App icon" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Mobile application</span><span>2021</span></div><h3>Union App</h3><p>A collaborative social application concept for discussions, events, and messages.</p></div></a>
-        <a class="project-card" href="EmojiBil.html" data-project-category="game"><div class="project-media"><img src="img/projects/EmojiBil/icon.png" alt="Emoji Puzzle icon" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Word puzzle</span><span>2020</span></div><h3>Emoji Puzzle</h3><p>Decode familiar expressions using compact emoji clues and a letter bank.</p></div></a>
-        <a class="project-card" href="ConfessIt.html" data-project-category="web"><div class="project-media"><img src="img/projects/ConfessIt/5.PNG" alt="Confess It database structure" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Web application</span><span>2019</span></div><h3>Confess It</h3><p>A full-stack social prototype with posts, profiles, messaging, and notifications.</p></div></a>
-        <a class="project-card" href="MrRobot.html" data-project-category="app"><div class="project-media"><img src="img/projects/MrRobot/icon.PNG" alt="Mr. Robot Chat Game icon" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Chat game</span><span>2015</span></div><h3>Mr. Robot Chat Game</h3><p>An early Android experiment in branching replies and conversational interaction.</p></div></a>
-        <a class="project-card" href="LazerDefenser.html" data-project-category="learning"><div class="project-media"><img src="img/projects/LazerDefenser/icon.PNG" alt="Laser Defender artwork" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Arcade study</span><span>Unity 2D</span></div><h3>Laser Defender</h3><p>A classic shooter study covering waves, projectiles, scoring, and feedback.</p></div></a>
-        <a class="project-card" href="BlockBreaker.html" data-project-category="learning"><div class="project-media"><img src="img/projects/BlockBreaker/icon.PNG" alt="Block Breaker artwork" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Physics study</span><span>Unity 2D</span></div><h3>Block Breaker</h3><p>A focused brick-breaker exercise in physics, levels, sound, and game state.</p></div></a>
-      </div>
-    </section>
 
-    <section class="section section-divider shell">
-      <div class="capability-strip">
-        <div><p class="eyebrow">More than screenshots</p><h2>Three demos run in the browser.</h2><p>The interactive lab preserves working WebGL tools for drawing, keyframe animation, and real-time shading.</p></div>
-        <div><a class="button button-arrow" href="index.html#lab">Open the interactive lab</a></div>
+      <div class="project-toolbar">
+        <div class="filter-bar" data-project-filters role="group" aria-label="Filter projects">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All 13</button>
+          <button class="filter-button" type="button" data-filter="game" aria-pressed="false">Games 8</button>
+          <button class="filter-button" type="button" data-filter="app" aria-pressed="false">Applications 2</button>
+          <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web 1</button>
+          <button class="filter-button" type="button" data-filter="learning" aria-pressed="false">Learning 2</button>
+        </div>
+        <p class="filter-count" data-filter-count aria-live="polite">13 projects shown</p>
       </div>
+
+      <div class="archive-grid">
+        <a class="project-card" href="ReachToSpace.html" data-project-category="game" style="--card-accent: var(--sky)"><div class="project-media"><img src="img/projects/ReachToSpace/icon.jpg" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Educational game</span><span>2021</span></div><h3>Reach to Space</h3><p>Manage fuel and solve quick arithmetic questions on a rocket journey.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--portrait" href="StackPush.html" data-project-category="game" style="--card-accent: var(--coral)"><div class="project-media"><img src="img/projects/StackPush/1.jpg" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Runner game</span><span>2021</span></div><h3>Push Stacks</h3><p>Grow a stronger crowd by choosing the right multiplier gates.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card" href="Cocktail.html" data-project-category="game" style="--card-accent: #ff9ad5"><div class="project-media"><img src="img/projects/Cocktail/d.png" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Creative game</span><span>2021</span></div><h3>DIY Cocktail</h3><p>Mix ingredients, liquid effects, glitter, and decoration in a tactile mobile toy.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card" href="ShootingBalls.html" data-project-category="game" style="--card-accent: #ffd96a"><div class="project-media"><img src="img/projects/ShootingBalls/icon.png" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Puzzle game</span><span>2021</span></div><h3>Shooting Balls</h3><p>Aim for baskets and calculate the multiplier needed to clear each level.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--portrait" href="TypeIt.html" data-project-category="game" style="--card-accent: var(--violet)"><div class="project-media"><img src="img/projects/TypeIt/finger.PNG" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Typing game</span><span>2021</span></div><h3>Type It 3D</h3><p>Turn mechanical keyboard input into movement through a short arcade course.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--icon" href="FillIn.html" data-project-category="game" style="--card-accent: var(--acid)"><div class="project-media"><img src="img/projects/FillIn/icon.png" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Spatial puzzle</span><span>2021</span></div><h3>Fill In</h3><p>Cover every tile without crossing a completed path.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--portrait" href="PoppingBalloons.html" data-project-category="game" style="--card-accent: #ff8e64"><div class="project-media"><img src="img/projects/PoppingBalloons/2.PNG" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Obstacle runner</span><span>2021</span></div><h3>Popping Balloons</h3><p>Guide a needle through hazards and line up satisfying chains of pops.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--icon" href="EmojiBil.html" data-project-category="game" style="--card-accent: #ffd86a"><div class="project-media"><img src="img/projects/EmojiBil/icon.png" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Word puzzle</span><span>2020</span></div><h3>Emoji Puzzle</h3><p>Decode familiar expressions using compact emoji clues and a letter bank.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--icon" href="Union.html" data-project-category="app" style="--card-accent: var(--sky)"><div class="project-media"><img src="img/projects/Union/icon.png" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Mobile application</span><span>2021</span></div><h3>Union App</h3><p>A collaborative social application concept for discussions, events, and messages.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--icon" href="ConfessIt.html" data-project-category="web" style="--card-accent: var(--coral)"><div class="project-media"><img src="img/projects/ConfessIt/5.PNG" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Web application</span><span>2019</span></div><h3>Confess It</h3><p>A full-stack social prototype with posts, profiles, messaging, and notifications.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--icon" href="MrRobot.html" data-project-category="app" style="--card-accent: #f47991"><div class="project-media"><img src="img/projects/MrRobot/icon.PNG" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Chat game</span><span>2015</span></div><h3>Mr. Robot Chat Game</h3><p>An early Android experiment in branching replies and conversational interaction.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--icon" href="LazerDefenser.html" data-project-category="learning" style="--card-accent: var(--violet)"><div class="project-media"><img src="img/projects/LazerDefenser/icon.PNG" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Arcade study</span><span>Unity 2D</span></div><h3>Laser Defender</h3><p>A classic shooter study covering waves, projectiles, scoring, and feedback.</p><span class="project-card-cta">View case study</span></div></a>
+        <a class="project-card project-card--icon" href="BlockBreaker.html" data-project-category="learning" style="--card-accent: var(--acid)"><div class="project-media"><img src="img/projects/BlockBreaker/icon.PNG" alt="" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Physics study</span><span>Unity 2D</span></div><h3>Block Breaker</h3><p>A focused brick-breaker exercise in physics, levels, sound, and game state.</p><span class="project-card-cta">View case study</span></div></a>
+      </div>
+
+      <div class="archive-lab-cta"><div><p class="eyebrow">Playable in the browser</p><h2>Three experiments need no install.</h2><p>Draw with WebGL, animate an articulated figure, or explore a live shader study.</p></div><a class="button button-arrow" href="lab.html">Open the demo lab</a></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-shell shell">
-      <p class="footer-copy">© <span data-current-year></span> Game Maker Portfolio. Built around playable work.</p>
-      <nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="index.html#lab">Interactive lab</a><a href="about.html">About the work</a></nav>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="footer-shell shell"><p class="footer-copy">© <span data-current-year></span> Trelans. Built around playable work.</p><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="lab.html">Demo lab</a><a href="about.html">About</a></nav></div></footer>
   <script src="js/site.js"></script>
 </body>
 </html>
